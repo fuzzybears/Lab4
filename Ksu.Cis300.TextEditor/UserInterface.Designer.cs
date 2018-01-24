@@ -35,6 +35,8 @@
             this.uxDisplay = new System.Windows.Forms.TextBox();
             this.uxOpenDialog = new System.Windows.Forms.OpenFileDialog();
             this.uxSaveDialog = new System.Windows.Forms.SaveFileDialog();
+            this.uxWithString = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxWithStringBuilder = new System.Windows.Forms.ToolStripMenuItem();
             this.uxMenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,9 @@
             // 
             this.uxFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uxOpen,
-            this.uxSaveAs});
+            this.uxSaveAs,
+            this.uxWithString,
+            this.uxWithStringBuilder});
             this.uxFile.Name = "uxFile";
             this.uxFile.Size = new System.Drawing.Size(37, 20);
             this.uxFile.Text = "File";
@@ -60,14 +64,14 @@
             // uxOpen
             // 
             this.uxOpen.Name = "uxOpen";
-            this.uxOpen.Size = new System.Drawing.Size(132, 22);
+            this.uxOpen.Size = new System.Drawing.Size(170, 22);
             this.uxOpen.Text = "Open . . .";
             this.uxOpen.Click += new System.EventHandler(this.uxOpen_Click);
             // 
             // uxSaveAs
             // 
             this.uxSaveAs.Name = "uxSaveAs";
-            this.uxSaveAs.Size = new System.Drawing.Size(132, 22);
+            this.uxSaveAs.Size = new System.Drawing.Size(170, 22);
             this.uxSaveAs.Text = "Save As . . .";
             this.uxSaveAs.Click += new System.EventHandler(this.uxSaveAs_Click);
             // 
@@ -77,11 +81,27 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uxDisplay.Location = new System.Drawing.Point(12, 27);
+            this.uxDisplay.MaxLength = 0;
             this.uxDisplay.Multiline = true;
             this.uxDisplay.Name = "uxDisplay";
             this.uxDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.uxDisplay.Size = new System.Drawing.Size(532, 520);
             this.uxDisplay.TabIndex = 1;
+            // 
+            // uxWithString
+            // 
+            this.uxWithString.AutoSize = false;
+            this.uxWithString.Name = "uxWithString";
+            this.uxWithString.Size = new System.Drawing.Size(170, 22);
+            this.uxWithString.Text = "With String";
+            this.uxWithString.Click += new System.EventHandler(this.uxWithString_Click);
+            // 
+            // uxWithStringBuilder
+            // 
+            this.uxWithStringBuilder.Name = "uxWithStringBuilder";
+            this.uxWithStringBuilder.Size = new System.Drawing.Size(170, 22);
+            this.uxWithStringBuilder.Text = "With StringBuilder";
+            this.uxWithStringBuilder.Click += new System.EventHandler(this.uxWithStringBuilder_Click);
             // 
             // UserInterface
             // 
@@ -109,6 +129,8 @@
         private System.Windows.Forms.TextBox uxDisplay;
         private System.Windows.Forms.OpenFileDialog uxOpenDialog;
         private System.Windows.Forms.SaveFileDialog uxSaveDialog;
+        private System.Windows.Forms.ToolStripMenuItem uxWithString;
+        private System.Windows.Forms.ToolStripMenuItem uxWithStringBuilder;
     }
 }
 
